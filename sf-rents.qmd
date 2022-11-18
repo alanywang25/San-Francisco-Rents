@@ -2,7 +2,7 @@
 title: "Rent in San Francisco"
 subtitle: "TidyTuesday Challenge (from 7/5/22)"
 author: "Alan Wang"
-date: "INSERT DATE"
+date: "November 18th, 2022"
 format: pdf
 editor: visual
 execute:
@@ -77,21 +77,13 @@ rents_fit |>
   kable(digits = 3)
 ```
 
-For every one additional year, we expect that the average monthly rent price will increase by \$183.80, on average, holding all else constant.
-
-For every one additional bedroom in the rental property, we expect that the average monthly rent price will increase by \$5.54, on average, holding all else constant.
-
-For every one additional bathroom in the rental property, we expect that the average monthly rent price will increase by \$321.81, on average, holding all else constant.
-
-For every one additional square foot of the rental property size, we expect that the average monthly rent price will increase by \$1.02, on average, holding all else constant.
+For every one additional year, we expect that the average monthly rent price will increase by \$183.80, on average, holding all else constant. For every one additional bedroom in the rental property, we expect that the average monthly rent price will increase by \$5.54, on average, holding all else constant. For every one additional bathroom in the rental property, we expect that the average monthly rent price will increase by \$321.81, on average, holding all else constant. For every one additional square foot of the rental property size, we expect that the average monthly rent price will increase by \$1.02, on average, holding all else constant.
 
 We expect that a rental apartment that has space available will have an average monthly rent price that is \$468.12 less than a rental apartment that does not have space available, on average, holding all else constant.
 
 ## Visualizations
 
 ### Map of Rental Properties by Location
-
-This visualization displays where properties are located by longitude and latitude. The data was filtered to only include valid longitude and latitude coordinates from the previously filtered `rents` dataset.
 
 ```{r prep-data}
 rent_maps <- rents |>
@@ -102,11 +94,9 @@ rent_maps <- rents |>
 qmplot(lon, lat, data = rent_maps, maptype = "toner-lite", color = I("red"), zoom = 8)
 ```
 
-The map shows that the majority of the rental properties are clustered around the San Francisco Bay area, with a very high concentration in the city of San Francisco, as well as in the southern region of the Bay Area near Sunnyvale and San Jose. There also appear to be several outliers that are further north of the San Francisco Bay.
+This map displays where properties are located by longitude and latitude. The data was filtered to only include valid longitude and latitude coordinates from the previously filtered `rents` dataset. The map shows that the majority of the rental properties are clustered around the San Francisco Bay area, with a very high concentration in the city of San Francisco, as well as in the southern region of the Bay Area near Sunnyvale and San Jose. There also appear to be several outliers that are further north of the San Francisco Bay.
 
 ### **Number of Rentals Posted Per County By Year**
-
-This visualization displays
 
 ```{r rental-counts}
 ggplot(data = rents, aes(fill = county, x = year)) +
@@ -116,7 +106,7 @@ ggplot(data = rents, aes(fill = county, x = year)) +
        title = "Distribution of Number of Rentals Posted Per County By Year")
 ```
 
-The plot shows that the number of rentals posted was the highest in 2011, and the number of rentals posted appears to significantly increase from 2010 to 2011, with very little postings between 2000 and 2010. There also appears to be sharp drops in the number of rental postings between 2011 and 2012 and 2016 and 2017. Between 2011 and 2018, Santa Clara County consistently has the highest number of rentals posted compared to other counties.
+This stacked bar graph displays the number of rental postings each year for each county. The graph shows that the number of rentals posted was the highest in 2011, and the number of rentals posted appears to significantly increase from 2010 to 2011, with very little postings between 2000 and 2010. There also appears to be sharp drops in the number of rental postings between 2011 and 2012 and 2016 and 2017. Between 2011 and 2018, Santa Clara County consistently has the highest number of rentals posted compared to other counties.
 
 ## References
 
