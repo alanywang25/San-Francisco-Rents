@@ -6,7 +6,7 @@ This data were collected by Dr. Kate Pennington, who scraped Craiglist rental po
 
 ## Visualizations
 
-The following images show the visualizations created using the data. The written report contains the code necessary to reproduce the visualizations.
+The following images show the visualizations created using the data. The written report contains the code necessary to reproduce the visualizations, as well as the code for a linear regression model predicting the monthly rent price.
 
 <p float="left">
 
