@@ -13,14 +13,12 @@ execute:
 ## Set Up
 
 ```{r load-packages-data}
-# load packages
 library(tidyverse)
 library(tidymodels) 
 library(knitr) 
 library(dplyr)
 library(ggmap)
 
-# load data
 rent <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-07-05/rent.csv')
 ```
 
@@ -106,7 +104,7 @@ qmplot(lon, lat, data = rent_maps, maptype = "toner-lite", color = I("red"), zoo
 
 The map shows that the majority of the rental properties are clustered around the San Francisco Bay area, with a very high concentration in the city of San Francisco, as well as in the southern region of the Bay Area near Sunnyvale and San Jose. There also appear to be several outliers that are further north of the San Francisco Bay.
 
-### **Number of Rentals Posted Per County By Year** 
+### **Number of Rentals Posted Per County By Year**
 
 This visualization displays
 
