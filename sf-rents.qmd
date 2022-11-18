@@ -119,3 +119,7 @@ ggplot(data = rents, aes(fill = county, x = year)) +
 ```
 
 The plot shows that the number of rentals posted was the highest in 2011, and the number of rentals posted appears to significantly increase from 2010 to 2011, with very little postings between 2000 and 2010. There also appears to be sharp drops in the number of rental postings between 2011 and 2012 and 2016 and 2017. Between 2011 and 2018, Santa Clara County consistently has the highest number of rentals posted compared to other counties.
+
+## References
+
+Pennington, Kate (2018). Bay Area Craigslist Rental Housing Posts, 2000-2018. Retrieved from <https://github.com/katepennington/historic_bay_area_craigslist_housing_posts/blob/master/clean_2000_2018.csv.zip>.
